@@ -1,0 +1,23 @@
+<app-welcome></app-welcome>
+<!-- <h1 class="text-center">Update Employee Information</h1>
+<hr> -->
+
+<form>
+    <h2 class="text-center">Department Information</h2>
+    <hr>
+    <div class="form-row">
+
+      <div class="form-group">
+        <label for="fname" >Department Name: </label>
+        <input type="text" [(ngModel)]="department.departName" name="departName" class="form-control" id="department" placeholder="Department Name">
+      </div>
+     
+    </div>
+  
+      
+     
+    
+    <button type="submit" (click)="handleSaveClick()" class="btn btn-secondary">Save Department</button>
+  </form>
+
+

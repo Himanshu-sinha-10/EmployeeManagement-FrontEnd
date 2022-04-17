@@ -1,0 +1,48 @@
+<app-welcome></app-welcome>
+<h1 class=title>Employee Details</h1>
+<!-- <h5 class="add-emp"><a class="text-secondary" routerLink="employee/add"><i class="bi bi-plus-circle"></i>Add Employee</a></h5> -->
+<button (click) = "handleAddEmployee()" type="button" class="btn btn-default btn-lg bg-secondary add-emp">
+    <i class="bi bi-plus-circle"></i> Add Employee
+</button>
+
+
+<div class="table-responsive">
+    <table class="table table-striped table-lg table-dark">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>D.O.B</th>
+                <th>Department</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let emp of employees | paginate: { id: "foo",
+            itemsPerPage: 4,
+            currentPage: page,
+            totalItems: totalRecords }'>
+            <!-- <tr *ngFor='let emp of employees'> -->
+                <td>{{emp.userId}}</td>
+                <td>{{emp.firstName + " " + emp.lastName}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.dob | date}}</td>
+                <td>{{emp.department.departName}}</td>
+                <td><i (click)="handleEditClick(emp.userId)" class="bi bi-pencil-square fa-3x"></i><i
+                    (click)="handleDeleteClick(emp.userId)" class="bi bi-person-x-fill fa-3x"></i></td>
+            </tr>
+        </tbody>
+       
+    </table>
+    <div class="controls">
+        <pagination-controls  id="foo"
+        (pageChange) = "page = $event"
+        previousLabel="Previous"
+        nextLabel="Next"
+        screenReaderPaginationLabel="Pagination"
+        screenReaderPageLabel="page"
+        screenReaderCurrentLabel="You're on page">
+</pagination-controls>
+</div>
+</div>

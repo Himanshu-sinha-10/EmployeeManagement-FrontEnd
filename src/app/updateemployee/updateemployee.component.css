@@ -1,0 +1,27 @@
+h1{
+    color:rgb(87, 86, 86);
+}
+
+form{
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width:65%;
+    margin: 0 auto;
+    border: 2px solid rgb(87, 86, 86);
+    padding: 20px;
+    border-radius: 5px;
+ 
+}
+
+hr{
+    height: 20px;
+    border-top: 5px dotted rgb(87, 86, 86);;
+    width: 30%;
+}
+
+button:hover{
+    color: #edce00;
+}
+
+

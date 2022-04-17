@@ -1,0 +1,78 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+table{
+    top: 40%;
+    width: 77%;
+    position: absolute;
+    right: 45px;
+}
+
+table thead{
+    background-color:rgb(87, 86, 86);
+    color: #edce00;
+}
+ tbody{
+    padding: 100px;
+}
+
+.title{
+    position: absolute;
+    left: 20%;
+    top: 25%;
+
+}
+
+.add-emp{
+    position: absolute;
+    right: 45px;
+    color:azure;
+    top: 25%;
+   
+}
+.add-emp:hover{
+    color:#edce00;
+}
+
+i{
+    margin: 0 6px 0px 6px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+i:hover{
+    color:#edce00;
+}
+
+
+
+a{
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+td{
+    font-size: 16px;
+}
+
+.mycontainer{
+    padding: 100px;
+    background-color: red;
+}
+.table-responsive{
+    
+    bottom: 0px;
+
+}
+.controls{
+  
+    
+    color: aliceblue;
+    position:absolute;
+    right:35%;
+    bottom:2%;
+  
+
+}
+
+

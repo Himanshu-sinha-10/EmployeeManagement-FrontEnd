@@ -1,0 +1,49 @@
+<app-welcome></app-welcome>
+<h1 class = title>Department Details</h1>
+<!-- <h5 class="add-emp"><a class="text-secondary" routerLink="employee/add"><i class="bi bi-plus-circle"></i>Add Department</a></h5> -->
+<button type="button" (click) = "handleAddDepartment()" class="btn btn-default btn-lg bg-secondary add-emp">
+    <i class="bi bi-plus-circle"></i> Add Department
+  </button>
+<div class="table-responsive">
+    <table class="table table-striped table-sm table-dark">
+        <thead>
+            <tr>
+                <th>Department ID</th>
+                <th>Department</th>
+                
+                <th>Actions</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let dept of departments | paginate: { id: "foo",
+            itemsPerPage: 4,
+            currentPage: page,
+            totalItems: totalRecords }'>
+            <!-- <tr *ngFor='let emp of employees'> -->
+                <td>{{dept.deparId}}</td>
+                <td>{{dept.departName}}</td>
+                
+               
+                <td><i (click)="handleEditClick(dept.deparId)" class="bi bi-pencil-square fa-3x"></i><i
+                    (click)="handleDeleteClick(dept.deparId)" class="bi bi-person-x-fill fa-3x"></i></td>
+            </tr>
+            </tbody>
+    </table>
+    <div class="controls">
+        <pagination-controls  id="foo"
+        (pageChange) = "page = $event"
+        previousLabel="Previous"
+        nextLabel="Next"
+        screenReaderPaginationLabel="Pagination"
+        screenReaderPageLabel="page"
+        screenReaderCurrentLabel="You're on page">
+        </pagination-controls>
+        </div>
+</div> 
+
+
+
+
+
+
